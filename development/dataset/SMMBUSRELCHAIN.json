@@ -1,0 +1,49 @@
+{
+	"name": "SMMBUSRELCHAIN",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PWDBS024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "CHAINID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DESCRIPTION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SC_INELIGIBLE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SMMBUSRELCHAINGROUP"
+		}
+	}
+}

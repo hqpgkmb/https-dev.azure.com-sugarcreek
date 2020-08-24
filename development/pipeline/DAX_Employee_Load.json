@@ -1,0 +1,106 @@
+{
+	"name": "DAX_Employee_Load",
+	"properties": {
+		"activities": [
+			{
+				"name": "DAX_Employee_Load",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "select                  UI.ID as EmployeeSourceID, \n                            SUBSTRING(UI.Name,CHARINDEX(CHAR(44),UI.Name) +1, LEN(UI.Name)) as First_Name,\n                            SUBSTRING(UI.Name, 0, CHARINDEX(CHAR(44), UI.Name, 0)) as Last_Name\nfrom                   [USERINFO] as UI",
+						"queryTimeout": "02:00:00"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "EmployeeSourceID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "EmployeeSourceID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "First_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "First_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Last_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Last_Name",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DAX_Employee_Source",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ADF_Employee_Stage",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Employee_Load",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "DAX_Employee_Load",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[adf].[dim_Employee_Load]"
+				},
+				"linkedServiceName": {
+					"referenceName": "EDW",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}

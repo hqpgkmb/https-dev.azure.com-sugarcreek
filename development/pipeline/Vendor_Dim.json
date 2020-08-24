@@ -1,0 +1,344 @@
+{
+	"name": "Vendor_Dim",
+	"properties": {
+		"activities": [
+			{
+				"name": "csv_vendor",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Vendor_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Vendor_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Vendor_Source_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Vendor_Source_Key",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Group",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Group",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Group_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Group_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Payment_Terms",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Payment_Terms",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Currency",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Currency",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Payment_Mode",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Payment_Mode",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Markup_Group",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Markup_Group",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Blocked",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Blocked",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Country_Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Country_Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Address",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Address",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "City",
+									"type": "String"
+								},
+								"sink": {
+									"name": "City",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Street",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Street",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Zip_Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Zip_Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "State",
+									"type": "String"
+								},
+								"sink": {
+									"name": "State",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "County",
+									"type": "String"
+								},
+								"sink": {
+									"name": "County",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax_1099_Number",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Tax_1099_Number",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Alias",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Alias",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Party_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Party_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Tax_ID_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Tax_ID_Type",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Foreign_Entity_Flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Foreign_Entity_Flag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "Small_Business_Flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Small_Business_Flag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "Party_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Party_Type",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "Locally_Owned_Flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Locally_Owned_Flag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "Bid_Only_Flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bid_Only_Flag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "W9_Flag",
+									"type": "String"
+								},
+								"sink": {
+									"name": "W9_Flag",
+									"type": "Boolean"
+								}
+							},
+							{
+								"source": {
+									"name": "FirstInsertDatetime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FirstInsertDatetime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "UpdateDatetime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UpdateDatetime",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Vendor_file",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Vendor_Dim",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

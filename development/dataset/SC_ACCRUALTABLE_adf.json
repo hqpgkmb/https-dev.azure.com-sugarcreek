@@ -1,0 +1,374 @@
+{
+	"name": "SC_ACCRUALTABLE_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ACCRUALAMOUNT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "ACCRUALAMOUNTUNIT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "ACCRUALCRITERIATYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCRUALGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ACCRUALID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ACCRUALPERCENT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "ACCRUALPOINT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCRUALSTATUS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCRUALTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ACCUMULATIONOFFSETACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONOFFSETACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONOFFSETLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ACCUMULATIONREVACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONREVACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONREVLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ACCUMULATIONREVOFFSETACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONREVOFFSETACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCUMULATIONREVOFFSETLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ALLOWAMOUNTEDIT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CATEGORYRELATION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CLAIMACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMAPPACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMAPPACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMAPPLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CLAIMAPPOFFSETACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMAPPOFFSETACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMAPPOFFSETLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CLAIMLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CLAIMOFFSETACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMOFFSETACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMOFFSETLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CLAIMREVACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMREVACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMREVLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CLAIMREVOFFSETACCOUNTPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMREVOFFSETACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLAIMREVOFFSETLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "COSTCODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COSTRELATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CURRENCYCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CUSTPAYMMODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CUSTVENDCODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CUSTVENDRELATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATEINTERVALCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DESCRIPTION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FIXEDAMOUNT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "FROMDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "INVENTDIMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTVENDCUST",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ITEMCODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ITEMRELATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMUNITID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAXIMUMACCRUAL",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MAXIMUMACCRUALLIFETIME",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MAXQUANTITY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MINIMUMACCRUAL",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MINQUANTITY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "NEGATIVEPOSITIVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TAXGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TODATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDTRANSACTIONID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SC_ACCRUALTABLE"
+		}
+	}
+}

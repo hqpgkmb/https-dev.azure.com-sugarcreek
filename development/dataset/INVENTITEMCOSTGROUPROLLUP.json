@@ -1,0 +1,73 @@
+{
+	"name": "INVENTITEMCOSTGROUPROLLUP",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PWDBS024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "QTY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "COSTGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTITEMPRICEREFRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SPLIT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COSTAMOUNTSTD",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "COSTLEVEL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COSTAMOUNTSECCUR_RU",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTITEMCOSTGROUPROLLUP"
+		}
+	}
+}

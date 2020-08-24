@@ -1,0 +1,236 @@
+{
+	"name": "SC_ACCRUALTRANS_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ACCOUNTINGCURRENCYAMOUNT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "ACCRUALAMOUNT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "ACCRUALID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ACCRUALINSTANCEREFRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ACCRUALPOINT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCRUALTRANSID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ACCRUALTRANSSTATE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCRUALTRANSTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCRUALTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CURRENCYCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CUSTVENDCODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CUSTVENDRELATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEFAULTDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "INVENTDIMFIXED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INVENTDIMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTTRANSID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTTRANSREFRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "INVENTVENDCUST",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INVOICEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMCODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ITEMINVENTDIMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMRELATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMUNITID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JOURNALNUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "LEDGERJOURNALTRANSREFRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "LINENUM",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "NEGATIVEPOSITIVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "OFFSETDEFAULTDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "OFFSETLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "PACKINGSLIPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PARENTRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "QTY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "REFERENCECATEGORY",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "REFERENCEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "VOUCHER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CREATEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "INVENTBATCHID",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "SC_ACCRUALTRANS"
+		}
+	}
+}

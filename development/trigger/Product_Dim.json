@@ -1,0 +1,37 @@
+{
+	"name": "Product_Dim",
+	"properties": {
+		"description": "Product load DAX to EDW_",
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "DAX_Product_Load",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "DAX_Product_Load",
+					"type": "PipelineReference"
+				}
+			},
+			{
+				"pipelineReference": {
+					"referenceName": "Inventory_Production_Level_Load",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2020-02-10T05:00:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

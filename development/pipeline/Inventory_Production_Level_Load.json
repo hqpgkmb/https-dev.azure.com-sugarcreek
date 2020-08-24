@@ -1,0 +1,28 @@
+{
+	"name": "Inventory_Production_Level_Load",
+	"properties": {
+		"activities": [
+			{
+				"name": "Inventory Production Level Load",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[adf].[fact_Product_Inventory_Levels_Load]"
+				},
+				"linkedServiceName": {
+					"referenceName": "EDW",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}

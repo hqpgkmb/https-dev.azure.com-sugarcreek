@@ -1,0 +1,454 @@
+{
+	"name": "Date_Dim",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Date_Type",
+				"type": "varchar"
+			},
+			{
+				"name": "Full_Date",
+				"type": "date"
+			},
+			{
+				"name": "Day_Number_Of_Week",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Day_Number_Of_Month",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Day_Number_Of_Quarter",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Day_Number_Of_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Day_Number_Absolute",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Day_Of_Week_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Day_Of_Week_Abbreviation",
+				"type": "varchar"
+			},
+			{
+				"name": "Julian_Day_Number_Of_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Julian_Day_Number_Absolute",
+				"type": "decimal",
+				"precision": 18,
+				"scale": 0
+			},
+			{
+				"name": "Is_Weekday",
+				"type": "char"
+			},
+			{
+				"name": "Is_US_Civil_Holiday",
+				"type": "char"
+			},
+			{
+				"name": "Is_Last_Day_Of_Week",
+				"type": "char"
+			},
+			{
+				"name": "Is_Last_Day_Of_Month",
+				"type": "char"
+			},
+			{
+				"name": "Is_Last_Day_Of_Quarter",
+				"type": "char"
+			},
+			{
+				"name": "Is_Last_Day_Of_Year",
+				"type": "char"
+			},
+			{
+				"name": "Is_Last_Day_Of_Fiscal_Month",
+				"type": "char"
+			},
+			{
+				"name": "Is_Last_Day_Of_Fiscal_Quarter",
+				"type": "char"
+			},
+			{
+				"name": "Is_Last_Day_Of_Fiscal_Year",
+				"type": "char"
+			},
+			{
+				"name": "Previous_Day_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Previous_Day_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Same_Weekday_Year_Ago_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Same_Weekday_Year_Ago_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Of_Year_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Week_Of_Year_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Of_Year_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Week_Of_Year_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Of_Month_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Week_Of_Month_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Of_Month_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Week_Of_Month_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Of_Quarter_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Week_Of_Quarter_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Of_Quarter_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Week_Of_Quarter_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Number_Of_Month",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Number_Of_Quarter",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Number_Of_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Week_Number_Overall",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Month_Number_Of_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Month_Number_Overall",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Month_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Month_Name_Abbreviation",
+				"type": "varchar"
+			},
+			{
+				"name": "Month_Begin_Date",
+				"type": "varchar"
+			},
+			{
+				"name": "Month_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Month_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Month_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Quarter_Number_Of_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Quarter_Number_Overall",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Quarter_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Quarter_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Quarter_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Quarter_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Year_Number",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Year_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Year_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Year_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Year_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "YYYYMM",
+				"type": "varchar"
+			},
+			{
+				"name": "YYYYMMDD",
+				"type": "varchar"
+			},
+			{
+				"name": "DDMONYY",
+				"type": "varchar"
+			},
+			{
+				"name": "DDMONYYYY",
+				"type": "varchar"
+			},
+			{
+				"name": "Fiscal_Week_Number_Of_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Week_Number_Overall",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Week_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Week_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Fiscal_Week_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Week_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Fiscal_Month_Number_Of_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Month_Number_Overall",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Month_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Fiscal_Month_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Month_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Fiscal_Month_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Quarter_Number_Of_Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Quarter_Number_Overall",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Quarter_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Fiscal_Quarter_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Quarter_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Fiscal_Quarter_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Year_Number",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Year_Begin_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Fiscal_Year_Begin_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Fiscal_Year_End_Date",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "Fiscal_Year_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_Date"
+		}
+	}
+}

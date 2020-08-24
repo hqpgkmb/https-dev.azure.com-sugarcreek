@@ -1,0 +1,48 @@
+{
+	"name": "INVENTITEMGROUPITEM_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMDATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMGROUPDATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTITEMGROUPITEM"
+		}
+	}
+}

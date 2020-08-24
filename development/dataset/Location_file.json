@@ -1,0 +1,48 @@
+{
+	"name": "Location_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "location.csv",
+				"fileSystem": "datalakev2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Location_Key",
+				"type": "String"
+			},
+			{
+				"name": "Location_ID",
+				"type": "String"
+			},
+			{
+				"name": "Location_Name",
+				"type": "String"
+			},
+			{
+				"name": "Has_Inventory",
+				"type": "String"
+			},
+			{
+				"name": "FirstInsertDatetime",
+				"type": "String"
+			},
+			{
+				"name": "UpdateDatetime",
+				"type": "String"
+			}
+		]
+	}
+}

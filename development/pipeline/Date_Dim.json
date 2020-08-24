@@ -1,0 +1,924 @@
+{
+	"name": "Date_Dim",
+	"properties": {
+		"activities": [
+			{
+				"name": "Date_dim",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Date_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Date_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Full_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Full_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Day_Number_Of_Week",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Day_Number_Of_Week",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Day_Number_Of_Month",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Day_Number_Of_Month",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Day_Number_Of_Quarter",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Day_Number_Of_Quarter",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Day_Number_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Day_Number_Of_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Day_Number_Absolute",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Day_Number_Absolute",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Day_Of_Week_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Day_Of_Week_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Day_Of_Week_Abbreviation",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Day_Of_Week_Abbreviation",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Julian_Day_Number_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Julian_Day_Number_Of_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Julian_Day_Number_Absolute",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Julian_Day_Number_Absolute",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Weekday",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Weekday",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_US_Civil_Holiday",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_US_Civil_Holiday",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Last_Day_Of_Week",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Last_Day_Of_Week",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Last_Day_Of_Month",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Last_Day_Of_Month",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Last_Day_Of_Quarter",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Last_Day_Of_Quarter",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Last_Day_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Last_Day_Of_Year",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Last_Day_Of_Fiscal_Month",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Last_Day_Of_Fiscal_Month",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Last_Day_Of_Fiscal_Quarter",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Last_Day_Of_Fiscal_Quarter",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Last_Day_Of_Fiscal_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Last_Day_Of_Fiscal_Year",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Previous_Day_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Previous_Day_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Previous_Day_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Previous_Day_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Same_Weekday_Year_Ago_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Same_Weekday_Year_Ago_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Same_Weekday_Year_Ago_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Same_Weekday_Year_Ago_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Year_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Year_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Year_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Year_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Year_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Year_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Year_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Year_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Month_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Month_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Month_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Month_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Month_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Month_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Month_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Month_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Quarter_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Quarter_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Quarter_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Quarter_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Quarter_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Quarter_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Of_Quarter_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Of_Quarter_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Number_Of_Month",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Number_Of_Month",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Number_Of_Quarter",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Number_Of_Quarter",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Number_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Number_Of_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Week_Number_Overall",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Week_Number_Overall",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_Number_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_Number_Of_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_Number_Overall",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_Number_Overall",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_Name_Abbreviation",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_Name_Abbreviation",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_Begin_Date",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Month_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Month_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Quarter_Number_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quarter_Number_Of_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Quarter_Number_Overall",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quarter_Number_Overall",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Quarter_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quarter_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Quarter_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quarter_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Quarter_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quarter_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Quarter_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Quarter_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Year_Number",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year_Number",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Year_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Year_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Year_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Year_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Year_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "YYYYMM",
+									"type": "String"
+								},
+								"sink": {
+									"name": "YYYYMM",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "YYYYMMDD",
+									"type": "String"
+								},
+								"sink": {
+									"name": "YYYYMMDD",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DDMONYY",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DDMONYY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "DDMONYYYY",
+									"type": "String"
+								},
+								"sink": {
+									"name": "DDMONYYYY",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Week_Number_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Week_Number_Of_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Week_Number_Overall",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Week_Number_Overall",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Week_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Week_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Week_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Week_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Week_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Week_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Week_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Week_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Month_Number_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Month_Number_Of_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Month_Number_Overall",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Month_Number_Overall",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Month_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Month_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Month_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Month_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Month_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Month_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Month_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Month_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Quarter_Number_Of_Year",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Quarter_Number_Of_Year",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Quarter_Number_Overall",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Quarter_Number_Overall",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Quarter_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Quarter_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Quarter_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Quarter_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Quarter_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Quarter_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Quarter_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Quarter_End_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_Number",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Year_Number",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_Begin_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Year_Begin_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_Begin_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Year_Begin_Date_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Year_End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Fiscal_Year_End_Date_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Fiscal_Year_End_Date_Key",
+									"type": "Int32"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Date_file",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Date_Dim",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

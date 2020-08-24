@@ -1,0 +1,134 @@
+{
+	"name": "USDA_Market_Data",
+	"properties": {
+		"activities": [
+			{
+				"name": "csv_Market_data",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Item_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Item_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Daily_Release_Version",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Daily_Release_Version",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Market_Data_Effective_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Market_Data_Effective_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "Pounds_Sold",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Pounds_Sold",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Lower_Limit_Per_100_Pounds",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Lower_Limit_Per_100_Pounds",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "Upper_Limit_Per_100_Pounds",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Upper_Limit_Per_100_Pounds",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "Weighted_Average_Per_100_Pounds",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Weighted_Average_Per_100_Pounds",
+									"type": "Decimal"
+								}
+							},
+							{
+								"source": {
+									"name": "Insert_Date_Time",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Insert_Date_Time",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "USDA_Market_Data_file",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "USDA_Market_Data_Dim",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

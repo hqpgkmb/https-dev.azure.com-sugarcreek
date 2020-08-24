@@ -1,0 +1,78 @@
+{
+	"name": "Room_Dim",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Room_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Location_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Room_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Room_Description",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Storage_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Temprature_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Availability_Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Active_Status",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Is_Plant",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Location_Owner",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Hour_Offset_From_Corporate",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Is_Current",
+				"type": "char"
+			},
+			{
+				"name": "End_Date",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CreateDateTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_Room"
+		}
+	}
+}

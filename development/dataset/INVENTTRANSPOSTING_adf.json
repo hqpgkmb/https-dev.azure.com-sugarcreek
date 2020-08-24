@@ -1,0 +1,137 @@
+{
+	"name": "INVENTTRANSPOSTING_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_INVENTTRANSID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "VOUCHER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POSTINGTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "POSTINGTYPEOFFSET",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_ACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_ACCOUNTOFFSET",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION2_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION3_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION4_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION5_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTTRANSPOSTINGTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ISPOSTED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PROJID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTTRANSORIGIN",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "LEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "OFFSETLEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DEFAULTDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "TRANSBEGINTIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "TRANSBEGINTIMETZID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTTRANSPOSTING"
+		}
+	}
+}

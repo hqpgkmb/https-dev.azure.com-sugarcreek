@@ -1,0 +1,17 @@
+{
+	"name": "PWDBS024",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=PWDBS024;initial catalog=DAX2012",
+			"userName": "SCPC\\kbailey",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiI0MjdjMzNkYy03ZjU4LTQ2ZTctYTkyMi1mMjFjZTI3OGU2MTEiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SCIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

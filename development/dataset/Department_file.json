@@ -1,0 +1,60 @@
+{
+	"name": "Department_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "department.csv",
+				"fileSystem": "datalakev2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Department_Key",
+				"type": "String"
+			},
+			{
+				"name": "Department_ID",
+				"type": "String"
+			},
+			{
+				"name": "Department_Code",
+				"type": "String"
+			},
+			{
+				"name": "Department_Name",
+				"type": "String"
+			},
+			{
+				"name": "Ledger_Code",
+				"type": "String"
+			},
+			{
+				"name": "Labor_Type",
+				"type": "String"
+			},
+			{
+				"name": "Site_ID",
+				"type": "String"
+			},
+			{
+				"name": "UpdateDateTime",
+				"type": "String"
+			},
+			{
+				"name": "CreateDateTime",
+				"type": "String"
+			}
+		]
+	}
+}

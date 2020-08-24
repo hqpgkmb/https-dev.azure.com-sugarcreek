@@ -1,0 +1,125 @@
+{
+	"name": "INVENTDIM",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PWDBS024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "INVENTDIMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTBATCHID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WMSLOCATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WMSPALLETID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSERIALID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTLOCATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CONFIGID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSIZEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTCOLORID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSITEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTGTDID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTPROFILEID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTOWNERID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSTYLEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LICENSEPLATEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSTATUSID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SHA1HASH",
+				"type": "varbinary"
+			},
+			{
+				"name": "SC_AIF",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTDIM"
+		}
+	}
+}

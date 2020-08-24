@@ -1,0 +1,29 @@
+{
+	"name": "ADF_Employee_Stage",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "EmployeeSourceID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "First_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Last_Name",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "etl",
+			"table": "dim_BI_Employee_Stage"
+		}
+	}
+}

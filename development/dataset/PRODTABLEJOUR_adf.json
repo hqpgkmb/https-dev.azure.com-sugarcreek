@@ -1,0 +1,143 @@
+{
+	"name": "PRODTABLEJOUR_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PRODID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTTRANSID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "JOURNALTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "QTYGOOD",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "VOUCHER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AMOUNTFINANCIAL",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "ADJUSTMENT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "QTYERROR",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "AMOUNTPHYSICAL",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "SCRAPVOUCHER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CANCELED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "OPENPRODORDER",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AMOUNTFINANCIALSECCUR_RU",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PDSCWBATCHERR",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PDSCWBATCHGOOD",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_PDSQTYERROR",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_PDSQTYGOOD",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PRODTABLEJOUR"
+		}
+	}
+}

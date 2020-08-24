@@ -1,0 +1,141 @@
+{
+	"name": "INVENTITEMPRICE_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VERSIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRICETYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INVENTDIMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MARKUP",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PRICEUNIT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PRICE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PRICECALCID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UNITID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRICEALLOCATEMARKUP",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PRICEQTY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "STDCOSTTRANSDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "STDCOSTVOUCHER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COSTINGTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACTIVATIONDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "PRICESECCUR_RU",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MARKUPSECCUR_RU",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "SC_SALESUNITCOSTPRICE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CREATEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTITEMPRICE"
+		}
+	}
+}

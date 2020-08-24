@@ -1,0 +1,17 @@
+{
+	"name": "DC_PDBS006",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=DC-PDBS006;initial catalog=DAX2009ProdSCPC",
+			"userName": "SCPC\\kbailey",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxNDg5NDdjOC0zYjlkLTQwZGQtYmE0Yi1jNjRlNzA0YTcxYTAiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SCIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

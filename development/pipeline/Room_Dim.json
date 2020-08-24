@@ -1,0 +1,194 @@
+{
+	"name": "Room_Dim",
+	"properties": {
+		"activities": [
+			{
+				"name": "Room_Dim",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Room_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Room_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Location_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Location_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Room_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Room_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Room_Description",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Room_Description",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Storage_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Storage_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Temprature_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Temprature_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Availability_Status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Availability_Status",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Active_Status",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Active_Status",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Plant",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Plant",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Location_Owner",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Location_Owner",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Hour_Offset_From_Corporate",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Hour_Offset_From_Corporate",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Current",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Is_Current",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "End_Date",
+									"type": "String"
+								},
+								"sink": {
+									"name": "End_Date",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "CreateDateTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CreateDateTime",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Room_file",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Room_Dim",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

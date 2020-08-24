@@ -1,0 +1,17 @@
+{
+	"name": "Ignite1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=DC-PDBS004;initial catalog=DAX2009ProdSCPC",
+			"userName": "SCPC\\kbailey",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJmZThjODE2ZC0yZjBjLTQxMWQtOWQ3MS04Njc2NGEzZmM4YzUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SCIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

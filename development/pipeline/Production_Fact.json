@@ -1,0 +1,28 @@
+{
+	"name": "Production_Fact",
+	"properties": {
+		"activities": [
+			{
+				"name": "fact_Production_Source_To_Stage",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[adf].[fact_Production_Source_To_Stage]"
+				},
+				"linkedServiceName": {
+					"referenceName": "EDW",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}

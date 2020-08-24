@@ -1,0 +1,56 @@
+{
+	"name": "USDA_Market_Data_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "Market_Data.csv",
+				"fileSystem": "datalakev2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Item_Name",
+				"type": "String"
+			},
+			{
+				"name": "Daily_Release_Version",
+				"type": "String"
+			},
+			{
+				"name": "Market_Data_Effective_Date",
+				"type": "String"
+			},
+			{
+				"name": "Pounds_Sold",
+				"type": "String"
+			},
+			{
+				"name": "Lower_Limit_Per_100_Pounds",
+				"type": "String"
+			},
+			{
+				"name": "Upper_Limit_Per_100_Pounds",
+				"type": "String"
+			},
+			{
+				"name": "Weighted_Average_Per_100_Pounds",
+				"type": "String"
+			},
+			{
+				"name": "Insert_Date_Time",
+				"type": "String"
+			}
+		]
+	}
+}

@@ -1,0 +1,108 @@
+{
+	"name": "DIMENSIONATTRIBUTEVALUECOMBINATION",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PWDBS024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "DISPLAYVALUE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_COMBINATIONHASH1",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_COMBINATIONHASH2",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_COMBINATIONHASH3",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_COMBINATIONHASH4",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_COMBINATIONHASH5",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_ACCOUNTNUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION2_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION3_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION4_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION5_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAINACCOUNT",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ACCOUNTSTRUCTURE",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "LEDGERDIMENSIONTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HASH",
+				"type": "varbinary"
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "DIMENSIONATTRIBUTEVALUECOMBINATION"
+		}
+	}
+}

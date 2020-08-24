@@ -1,0 +1,207 @@
+{
+	"name": "LOGISTICSPOSTALADDRESS_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ADDRESS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COUNTRYREGIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ZIPCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COUNTY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CITY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STREET",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LATITUDE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "LONGITUDE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "TIMEZONE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "STREETNUMBER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BUILDINGCOMPLIMENT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POSTBOX",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CITYRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DISTRICT",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "LOCATION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ZIPCODERECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "VALIDTO",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "VALIDTOTZID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "VALIDFROM",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "VALIDFROMTZID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DISTRICTNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STREETID_RU",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "HOUSEID_RU",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "FLATID_RU",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "APARTMENT_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BUILDING_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CITYKANA_JP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ISPRIVATE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PRIVATEFORPARTY",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "STREETKANA_JP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_ADDRESSWITHOUTCOUNTRYRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SC_COANOTIFICATION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SC_EDIDUNS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SC_OVERAGEAMOUNT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "SC_USEMETRIC",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "LOGISTICSPOSTALADDRESS"
+		}
+	}
+}

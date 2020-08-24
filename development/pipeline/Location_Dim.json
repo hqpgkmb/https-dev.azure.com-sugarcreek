@@ -1,0 +1,122 @@
+{
+	"name": "Location_Dim",
+	"properties": {
+		"activities": [
+			{
+				"name": "csv_location",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "DelimitedTextSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						},
+						"formatSettings": {
+							"type": "DelimitedTextWriteSettings",
+							"quoteAllText": true,
+							"fileExtension": ".txt"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Location_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Location_Key",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Location_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Location_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Location_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Location_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Has_Inventory",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Has_Inventory",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FirstInsertDatetime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "FirstInsertDatetime",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UpdateDatetime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UpdateDatetime",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Location_file",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Location_file",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

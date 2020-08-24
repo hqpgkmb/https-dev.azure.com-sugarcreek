@@ -1,0 +1,121 @@
+{
+	"name": "Production_fact",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Production_Line_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Location_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Product_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Schedule_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Real_Start_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Delivery_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Setup_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Finished_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Scheduled_Start_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Scheduled_End_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Creation_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Update_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Bill_Of_Material_Date_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Quantity_Scheduled",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Quantity_Setup",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Quantity_Calculated",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Quantity_Good",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "Quantity_Error",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "Amount_Physical",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "Amount_Financial",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "fact_Production"
+		}
+	}
+}

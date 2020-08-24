@@ -1,0 +1,84 @@
+{
+	"name": "INVENTITEMGROUP_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "ITEMGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STANDARDITEMALLOCATEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TAXITEMGROUPIDSALES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TAXITEMGROUPIDPURCH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DUEDATELIMITGROUPID_ES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ASSETGROUP_IN",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LOADTEMPLATEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SC_GROUPCATEGORY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SC_NONFOODITEM",
+				"type": "int",
+				"precision": 10
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTITEMGROUP"
+		}
+	}
+}

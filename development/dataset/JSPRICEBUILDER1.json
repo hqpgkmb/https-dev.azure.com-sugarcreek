@@ -1,0 +1,140 @@
+{
+	"name": "JSPRICEBUILDER1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DC_PDBS006",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "SALESID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REFRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "BASEPRICE",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "PRICEUNIT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "OVERBASIS",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "ACCRUALSUMMARY",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "TOTALPRICE",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "CUSTACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CREATEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SC_CURRENCYCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SC_EXCHRATE",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "SC_TOTALPRICEAMOUNTCUR",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "SC_TOTALPRICEAMOUNTMST",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "SC_BASEPRICEAMOUNTMST",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "SC_BASEPRICEAMOUNTCUR",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "SC_OVERBASISAMOUNTMST",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "SC_OVERBASISAMOUNTCUR",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "JSPRICEBUILDER"
+		}
+	}
+}

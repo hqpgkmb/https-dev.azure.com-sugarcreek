@@ -1,0 +1,405 @@
+{
+	"name": "JSREBATETABLE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DC_PDBS006",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "MODULE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSREBATEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSREBATESTATUS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSREBATECUSTINCLUSIVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSREBATEVENDINCLUSIVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSREBATECRITERIATYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSREBATEMINIMUM",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSREBATEMAXIMUM",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "ACCOUNTCODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCOUNTRELATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMCODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ITEMRELATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CUSTINVOICEACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VENDINVOICEACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FROMDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "TODATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "LEDGERACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSEXPECTEDREVENUEACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSINCURREDLIABILTYACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSTRADEVENDCALCDATES",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSTRADECUSTCALCDATES",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "QTYORDERED",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "LINEAMOUNT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSREBATEBUYERGROUP",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSREBATEESTIMATED",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "CURRENCYCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSCLAIMAMOUNT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSREBATEDESCRIPTION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSREBATEAMOUNT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSREBATEQUALIFYQTY",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSREBATEQUALIFYAMT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSREBATEMAXQUALIFYQTY",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSREBATEMAXQUALIFYAMT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "AMOUNT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "PERCENT_",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "PRICEUNIT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSFIXEDAMOUNTCUR",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "INVENTDIMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSREBATELEVEL",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSCLAIMAMOUNTAPPROVED",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSMERCHANDISINGEVENTID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSREBATESCANQTY",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "DATECODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSCLAIMDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "JSREBATEMINQUALIFYQTY",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "JSREBATEMINQUALIFYAMT",
+				"type": "decimal",
+				"precision": 28,
+				"scale": 12
+			},
+			{
+				"name": "CUSTPAYMMODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSDEDUCTIONNOYES",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AUTHORIZECLAIMGENERATION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TEMPLATE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSREBATEUNITID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_MODIFIEDTIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MODIFIEDTRANSACTIONID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CREATEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_CREATEDTIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CREATEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDTRANSACTIONID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CLAIMTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSCUSTREBATETYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSDEBITTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSDEBITPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSDEBITACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSCREDITTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSCREDITPOSTING",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "JSCREDITACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSDEBITDIMENSIONS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSDEBITDIMENSIONS2_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSDEBITDIMENSIONS3_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSCREDITDIMENSIONS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSCREDITDIMENSIONS2_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "JSCREDITDIMENSIONS3_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SC_REBATEGROUPID",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "JSREBATETABLE"
+		}
+	}
+}

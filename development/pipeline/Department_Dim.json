@@ -1,0 +1,144 @@
+{
+	"name": "Department_Dim",
+	"properties": {
+		"activities": [
+			{
+				"name": "csv_department",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "Department_Key",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Department_Key",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Department_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Department_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Department_Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Department_Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Department_Name",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Department_Name",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Ledger_Code",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Ledger_Code",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Labor_Type",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Labor_Type",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Site_ID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Site_ID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "UpdateDateTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "UpdateDateTime",
+									"type": "DateTime"
+								}
+							},
+							{
+								"source": {
+									"name": "CreateDateTime",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CreateDatetime",
+									"type": "DateTime"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Department_file",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "Department_Dim",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

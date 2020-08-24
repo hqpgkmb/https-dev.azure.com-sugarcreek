@@ -1,0 +1,368 @@
+{
+	"name": "DAX_Location_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PWDBS024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "INVENTLOCATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MANUAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EMPTYPALLETLOCATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAXPICKINGROUTEVOLUME",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PICKINGLINETIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MAXPICKINGROUTETIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WMSLOCATIONIDDEFAULTRECEIPT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WMSLOCATIONIDDEFAULTISSUE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTLOCATIONIDREQMAIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REQREFILL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INVENTLOCATIONTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INVENTLOCATIONIDQUARANTINE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTLOCATIONLEVEL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "REQCALENDARID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WMSAISLENAMEACTIVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WMSRACKNAMEACTIVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WMSRACKFORMAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WMSLEVELNAMEACTIVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WMSLEVELFORMAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WMSPOSITIONNAMEACTIVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WMSPOSITIONFORMAT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "USEWMSORDERS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INVENTLOCATIONIDTRANSIT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VENDACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BRANCHNUMBER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSITEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTCOUNTINGGROUP_BR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CUSTACCOUNT_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTPROFILETYPE_RU",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INVENTPROFILEID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTLOCATIONIDGOODSINROUTE_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WMSLOCATIONIDGOODSINROUTE_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ACTIVITYTYPE_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NUMBERSEQUENCEGROUP_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_RETAILREPLENISHMENTGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RETAILWEIGHTEX1",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "FSHSTORE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RBODEFAULTWMSPALLETID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RBODEFAULTWMSLOCATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RBODEFAULTINVENTPROFILEID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ALLOWLABORSTANDARDS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ALLOWMARKINGRESERVATIONREMOVAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CONSOLIDATESHIPATRTW",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CUSTACCOUNT_HU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CYCLECOUNTALLOWPALLETMOVE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DECREMENTLOADLINE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEFAULTKANBANFINISHEDGOODSLOCATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEFAULTPRODUCTIONFINISHGOODSLOCATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEFAULTSHIPMAINTENANCELOC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEFAULTSTATUSID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRINTBOLBEFORESHIPCONFIRM",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PRODRESERVEONLYWHSE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "REMOVEINVENTBLOCKINGONSTATUSCHANGE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RESERVEATLOADPOST",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RETAILINVENTNEGFINANCIAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RETAILINVENTNEGPHYSICAL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RETAILWMSLOCATIONIDDEFAULTRETURN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RETAILWMSPALLETIDDEFAULTRETURN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UNIQUECHECKDIGITS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "VENDACCOUNTCUSTOM_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WAREHOUSEAUTORELEASERESERVATION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "WHSENABLED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEFAULTRETURNCREDITONLYLOCATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEFAULTPRODUCTIONINPUTLOCATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "WHSRAWMATERIALPOLICY",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SC_DEFAULTDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_MODIFIEDTIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_CREATEDTIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CREATEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTLOCATION"
+		}
+	}
+}

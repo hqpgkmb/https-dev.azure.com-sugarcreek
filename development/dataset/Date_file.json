@@ -1,0 +1,372 @@
+{
+	"name": "Date_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "date.csv",
+				"fileSystem": "datalakev2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Date_Type",
+				"type": "String"
+			},
+			{
+				"name": "Full_Date",
+				"type": "String"
+			},
+			{
+				"name": "Day_Number_Of_Week",
+				"type": "String"
+			},
+			{
+				"name": "Day_Number_Of_Month",
+				"type": "String"
+			},
+			{
+				"name": "Day_Number_Of_Quarter",
+				"type": "String"
+			},
+			{
+				"name": "Day_Number_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Day_Number_Absolute",
+				"type": "String"
+			},
+			{
+				"name": "Day_Of_Week_Name",
+				"type": "String"
+			},
+			{
+				"name": "Day_Of_Week_Abbreviation",
+				"type": "String"
+			},
+			{
+				"name": "Julian_Day_Number_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Julian_Day_Number_Absolute",
+				"type": "String"
+			},
+			{
+				"name": "Is_Weekday",
+				"type": "String"
+			},
+			{
+				"name": "Is_US_Civil_Holiday",
+				"type": "String"
+			},
+			{
+				"name": "Is_Last_Day_Of_Week",
+				"type": "String"
+			},
+			{
+				"name": "Is_Last_Day_Of_Month",
+				"type": "String"
+			},
+			{
+				"name": "Is_Last_Day_Of_Quarter",
+				"type": "String"
+			},
+			{
+				"name": "Is_Last_Day_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Is_Last_Day_Of_Fiscal_Month",
+				"type": "String"
+			},
+			{
+				"name": "Is_Last_Day_Of_Fiscal_Quarter",
+				"type": "String"
+			},
+			{
+				"name": "Is_Last_Day_Of_Fiscal_Year",
+				"type": "String"
+			},
+			{
+				"name": "Previous_Day_Date",
+				"type": "String"
+			},
+			{
+				"name": "Previous_Day_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Same_Weekday_Year_Ago_Date",
+				"type": "String"
+			},
+			{
+				"name": "Same_Weekday_Year_Ago_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Year_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Year_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Year_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Year_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Month_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Month_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Month_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Month_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Quarter_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Quarter_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Quarter_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Week_Of_Quarter_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Week_Number_Of_Month",
+				"type": "String"
+			},
+			{
+				"name": "Week_Number_Of_Quarter",
+				"type": "String"
+			},
+			{
+				"name": "Week_Number_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Week_Number_Overall",
+				"type": "String"
+			},
+			{
+				"name": "Month_Number_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Month_Number_Overall",
+				"type": "String"
+			},
+			{
+				"name": "Month_Name",
+				"type": "String"
+			},
+			{
+				"name": "Month_Name_Abbreviation",
+				"type": "String"
+			},
+			{
+				"name": "Month_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Month_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Month_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Month_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Quarter_Number_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Quarter_Number_Overall",
+				"type": "String"
+			},
+			{
+				"name": "Quarter_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Quarter_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Quarter_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Quarter_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Year_Number",
+				"type": "String"
+			},
+			{
+				"name": "Year_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Year_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Year_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Year_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "YYYYMM",
+				"type": "String"
+			},
+			{
+				"name": "YYYYMMDD",
+				"type": "String"
+			},
+			{
+				"name": "DDMONYY",
+				"type": "String"
+			},
+			{
+				"name": "DDMONYYYY",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Week_Number_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Week_Number_Overall",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Week_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Week_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Week_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Week_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Month_Number_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Month_Number_Overall",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Month_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Month_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Month_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Month_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Quarter_Number_Of_Year",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Quarter_Number_Overall",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Quarter_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Quarter_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Quarter_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Quarter_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Year_Number",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Year_Begin_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Year_Begin_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Year_End_Date",
+				"type": "String"
+			},
+			{
+				"name": "Fiscal_Year_End_Date_Key",
+				"type": "String"
+			}
+		]
+	}
+}

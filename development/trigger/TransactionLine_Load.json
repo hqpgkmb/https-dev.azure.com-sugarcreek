@@ -1,0 +1,24 @@
+{
+	"name": "TransactionLine_Load",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "DAX_TransactionLine_Load",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2020-02-11T02:30:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

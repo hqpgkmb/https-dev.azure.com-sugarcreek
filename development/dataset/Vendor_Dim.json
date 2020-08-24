@@ -1,0 +1,140 @@
+{
+	"name": "Vendor_Dim",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Vendor_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Vendor_Source_Key",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Group",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Group_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Payment_Terms",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Currency",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Payment_Mode",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Markup_Group",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Blocked",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Country_Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Address",
+				"type": "nvarchar"
+			},
+			{
+				"name": "City",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Street",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Zip_Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "State",
+				"type": "nvarchar"
+			},
+			{
+				"name": "County",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Tax_1099_Number",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Alias",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Party_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Tax_ID_Type",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Foreign_Entity_Flag",
+				"type": "bit"
+			},
+			{
+				"name": "Small_Business_Flag",
+				"type": "bit"
+			},
+			{
+				"name": "Party_Type",
+				"type": "bit"
+			},
+			{
+				"name": "Locally_Owned_Flag",
+				"type": "bit"
+			},
+			{
+				"name": "Bid_Only_Flag",
+				"type": "bit"
+			},
+			{
+				"name": "W9_Flag",
+				"type": "bit"
+			},
+			{
+				"name": "FirstInsertDatetime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "UpdateDatetime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_Vendor"
+		}
+	}
+}

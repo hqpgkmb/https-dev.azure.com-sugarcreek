@@ -1,0 +1,58 @@
+{
+	"name": "Department_Dim",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Department_Key",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Department_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Department_Code",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Department_Name",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Ledger_Code",
+				"type": "nchar"
+			},
+			{
+				"name": "Labor_Type",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Site_ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "UpdateDateTime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CreateDatetime",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "dim_Department"
+		}
+	}
+}

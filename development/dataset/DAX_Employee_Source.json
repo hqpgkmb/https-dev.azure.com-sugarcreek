@@ -1,0 +1,322 @@
+{
+	"name": "DAX_Employee_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PWDBS024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ENABLE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_STARTUPMENU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STATUSLINEINFO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TOOLBARINFO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEBUGINFO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AUTOINFO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "AUTOUPDATE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GARBAGECOLLECTLIMIT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HISTORYLIMIT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MESSAGELIMIT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GENERALINFO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SHOWSTATUSLINE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SHOWTOOLBAR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEBUGGERPOPUP",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SHOWAOTLAYER",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_PASSWORD",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_OSACCOUNTNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STARTUPPROJECT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CONFIRMDELETE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CONFIRMUPDATE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "REPORTFONTNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REPORTFONTSIZE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FORMFONTNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FORMFONTSIZE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PROPERTYFONTNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PROPERTYFONTSIZE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INFOLOGLEVEL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "COMPANY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AUTOLOGOFF",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "QUERYTIMELIMIT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TRACEINFO",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "REPORTTOPMARGIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REPORTBOTTOMMARGIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REPORTLEFTMARGIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "REPORTRIGHTMARGIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COMPILERWARNINGLEVEL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NETWORKDOMAIN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NETWORKALIAS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ENABLEDONCE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EXTERNALUSER",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LANGUAGE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "HELPLANGUAGE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PREFERREDTIMEZONE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PREFERREDCALENDAR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "HOMEPAGEREFRESHDURATION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "NOTIFYTIMEZONEMISMATCH",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "FILTERBYGRIDONBYDEFAULT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GLOBALFORMOPENMODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_DEFAULTMODELID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SHOWMODELNAMEINAOT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ISSUERRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CREDENTIALRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "GLOBALLISTPAGELINKMODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GLOBALEXCELEXPORTMODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GLOBALEXCELEXPORTLOCATION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CLIENTACCESSLOGLEVEL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEFAULTPARTITION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "GLOBALEXCELEXPORTFILEPATH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "USERINFO"
+		}
+	}
+}

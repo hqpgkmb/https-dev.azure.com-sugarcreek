@@ -1,0 +1,16 @@
+{
+	"name": "JSPRICEBUILDER",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DC_PDBS006",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "JSPRICEBUILDER"
+		}
+	}
+}

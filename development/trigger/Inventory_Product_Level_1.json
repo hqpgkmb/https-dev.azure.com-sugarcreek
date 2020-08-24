@@ -1,0 +1,24 @@
+{
+	"name": "Inventory_Product_Level_1",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Inventory_Production_Level_Load",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2020-02-11T02:45:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

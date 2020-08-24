@@ -1,0 +1,27 @@
+{
+	"name": "DynamicsAX1",
+	"properties": {
+		"annotations": [],
+		"type": "DynamicsAX",
+		"typeProperties": {
+			"url": "https://sugar-creek.com/ax.dynamics.com/data",
+			"tenant": "9ee0e6d7-1d0a-423f-8648-15144ef85081",
+			"aadResourceId": "https://sugar-creek.com",
+			"servicePrincipalId": "kbailey@sugar-creek.com",
+			"servicePrincipalKey": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "SCPassword",
+				"secretVersion": "5be4f56f27594d098ee258a8a8519217"
+			}
+		},
+		"connectVia": {
+			"referenceName": "SCIR",
+			"type": "IntegrationRuntimeReference"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/linkedservices"
+}

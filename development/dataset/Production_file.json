@@ -1,0 +1,105 @@
+{
+	"name": "Production_file",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "production.csv",
+				"fileSystem": "datalakev2"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"nullValue": "0",
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "Production_Line_Key",
+				"type": "String"
+			},
+			{
+				"name": "Location_Key",
+				"type": "String"
+			},
+			{
+				"name": "Product_Key",
+				"type": "String"
+			},
+			{
+				"name": "Schedule_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Real_Start_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Delivery_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Setup_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Finished_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Scheduled_Start_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Scheduled_End_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Creation_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Update_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Bill_Of_Material_Date_Key",
+				"type": "String"
+			},
+			{
+				"name": "Quantity_Scheduled",
+				"type": "String"
+			},
+			{
+				"name": "Quantity_Setup",
+				"type": "String"
+			},
+			{
+				"name": "Quantity_Calculated",
+				"type": "String"
+			},
+			{
+				"name": "Quantity_Good",
+				"type": "String"
+			},
+			{
+				"name": "Quantity_Error",
+				"type": "String"
+			},
+			{
+				"name": "Amount_Physical",
+				"type": "String"
+			},
+			{
+				"name": "Amount_Financial",
+				"type": "String"
+			}
+		]
+	}
+}

@@ -1,0 +1,55 @@
+{
+	"name": "DAX_Product_1_Source",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PWDBS024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "LEDGERDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "INVENTACCOUNTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LEDGERDIMENSIONGROUP",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ITEMGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTITEMGROUPFORM"
+		}
+	}
+}

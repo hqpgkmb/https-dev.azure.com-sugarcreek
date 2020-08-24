@@ -1,0 +1,311 @@
+{
+	"name": "DAX_Product_Load",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy_Product_1",
+				"type": "Copy",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "SELECT IIGF.ItemGroupId\nFrom [PWDBS024].DAX2012.dbo.InventItemGroupForm AS IIGF \nLEFT OUTER JOIN [PWDBS024].DAX2012.dbo.DimensionAttributeValueCombination AS DAVC \n\tON IIGF.LedgerDimension = DAVC.RecId\nWhere IIGF.InventAccountType = 23 -- Sales Order, Revenue\nAND DAVC.DisplayValue = '6005' -- Finished Sales\norder by 1 asc\n\nSELECT IIGF.ItemGroupId\nINTO #Is_Sellable\nFrom [PWDBS024].DAX2012.dbo.InventItemGroupForm AS IIGF \nLEFT OUTER JOIN [PWDBS024].DAX2012.dbo.DimensionAttributeValueCombination AS DAVC \n\tON IIGF.LedgerDimension = DAVC.RecId\nWhere IIGF.InventAccountType = 23 -- Sales Order, Revenue\nAND DAVC.DisplayValue = '6005' -- Finished Sales\norder by 1 asc",
+						"queryTimeout": "02:15:00"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ItemGroupId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ItemGroupId",
+									"type": "String"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DAX_Product_1_Source",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ADF_Product_1",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "Copy_Product_2",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "Copy_Product_1",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "SqlServerSource",
+						"sqlReaderQuery": "select \n-1 as Product_key,\n\tii.itemid as  SourceProductID,\n\tii.itemtype as ItemType,\n\terpt.[NAME] as ProductName,\n\tii.SC_InventChannelId as Market,\n\tii.SC_InventProductLine as ProdType,\n\tii.SC_InventItemArchetype as PkgType,\n\tiigi.ItemGroupID as ItemGroupId,\t\n\tii.COSTGROUPID as CostGroupID,\n\tii.BomUnitId as Bill_Of_Material_Unit,\n\tii.DataAreaID as CompanyID,\n\tNULL as FirstInsertDateTime,\n\tNULL as UpadteDateTime,\n\tNULL as Is_Finished_Product,\n\tNULL as ItemGroupCategory\n\n\t\n \nFROM [PWDBS024].DAX2012.dbo.InventTable as ii\n\tINNER JOIN [PWDBS024].DAX2012.dbo.EcoResProductTranslation erpt ON \n\t\t\t\tIi.[PARTITION] = ERPT.[PARTITION] AND\n\t\t\t\tii.Product = erpt.Product\n\tINNER JOIN [PWDBS024].DAX2012.dbo.InventItemGroupItem iigi ON \n\tiigi.ItemId = ii.ItemId \n\t\t\t\tAND iigi.ItemDataAreaId = ii.DataAreaId \n\t\t\t\tAND iigi.[Partition] = ii.[Partition]\n\t\nwhere  erpt.LANGUAGEID = 'en-us'\n\tAND ii.DataAreaID = 'scpc'\nORDER BY ii.itemid asc",
+						"queryTimeout": "02:00:00"
+					},
+					"sink": {
+						"type": "AzureSqlSink"
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "SourceProductID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "SourceProductID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ItemType",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "ItemType",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "ProductName",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProductName",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Market",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Market",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProdType",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ProdType",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "PkgType",
+									"type": "String"
+								},
+								"sink": {
+									"name": "PkgType",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ItemGroupId",
+									"type": "String"
+								},
+								"sink": {
+									"name": "ItemGroupId",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CostGroupID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CostGroupID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Bill_Of_Material_Unit",
+									"type": "String"
+								},
+								"sink": {
+									"name": "Bill_Of_Material_Unit",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "CompanyID",
+									"type": "String"
+								},
+								"sink": {
+									"name": "CompanyID",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Is_Finished_Product",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "Is_Finsished_Product",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ItemGroupCategory",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "ItemGroupCategory",
+									"type": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FirstInsertDateTime",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "FirstInsertDateTime",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "UpadteDateTime",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "UpdatedateTime",
+									"type": "Int32"
+								}
+							},
+							{
+								"source": {
+									"name": "Product_key",
+									"type": "Int32"
+								},
+								"sink": {
+									"name": "Product_key",
+									"type": "Int32"
+								}
+							}
+						]
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "DAX_Product_2_Source",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "ADF_Product_2",
+						"type": "DatasetReference"
+					}
+				]
+			},
+			{
+				"name": "SourcetoStage",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "Copy_Product_2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[adf].[dim_Product_Source_To_Stage]"
+				},
+				"linkedServiceName": {
+					"referenceName": "EDW",
+					"type": "LinkedServiceReference"
+				}
+			},
+			{
+				"name": "Stored Procedure1",
+				"type": "SqlServerStoredProcedure",
+				"dependsOn": [
+					{
+						"activity": "SourcetoStage",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"storedProcedureName": "[adf].[dim_Product_Stage_To_Target]"
+				},
+				"linkedServiceName": {
+					"referenceName": "EDW",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"annotations": []
+	}
+}

@@ -1,0 +1,1042 @@
+{
+	"name": "PURCHTABLE_adf",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "PURCHID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PURCHNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ORDERACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVOICEACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FREIGHTZONE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "EMAIL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DELIVERYDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DELIVERYTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ADDRESSREFRECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ADDRESSREFTABLEID",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INTERCOMPANYORIGINALSALESID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INTERCOMPANYORIGINALCUSTACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CURRENCYCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PAYMENT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CASHDISC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_PURCHPLACER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COUNTYORIGDEST",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INTERCOMPANYDIRECTDELIVERY",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "VENDGROUP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LINEDISC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DISCPERCENT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_DIMENSION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION2_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION3_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION4_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DIMENSION5_",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRICEGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MULTILINEDISC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ENDDISC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INTERCOMPANYCUSTPURCHORDERFORMNUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DELIVERYADDRESS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TAXGROUP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DLVTERM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DLVMODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PURCHSTATUS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MARKUPGROUP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PURCHASETYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "URL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "POSTINGPROFILE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSACTIONCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ENTERPRISENUMBER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DELIVERYZIPCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVCOUNTY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVCOUNTRYREGIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVSTATE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SETTLEVOUCHER",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INTERCOMPANYALLOWINDIRECTCREATION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INTERCOMPANYORIGIN",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CASHDISCPERCENT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DELIVERYNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "COVSTATUS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PAYMENTSCHED",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTSITEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ONETIMEVENDOR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RETURNITEMNUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FREIGHTSLIPTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DOCUMENTSTATUS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CONTACTPERSONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INVENTLOCATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "BANKCENTRALBANKPURPOSECODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ITEMBUYERGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PROJID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PURCHPOOLID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VATNUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PORT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INCLTAX",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "BANKCENTRALBANKPURPOSETEXT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NUMBERSEQUENCEGROUP",
+				"type": "nvarchar"
+			},
+			{
+				"name": "LANGUAGEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AUTOSUMMARYMODULETYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TRANSPORT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_PRINTMODULETYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PAYMMODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PAYMSPEC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FIXEDDUEDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_DELIVERYCITY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DELIVERYSTREET",
+				"type": "nvarchar"
+			},
+			{
+				"name": "STATPROCID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "VENDORREF",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INTERCOMPANYCOMPANYID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INTERCOMPANYSALESID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INTERCOMPANYORDER",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RETURNREASONCODEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RETURNREPLACEMENTCREATED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "REQATTENTION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_REQUISITIONER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEFAULTDIMENSION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "CONFIRMEDDLVEARLIEST",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CONTRACTNUM_SA",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CHANGEREQUESTREQUIRED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "REASONTABLEREF",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DOCUMENTSTATE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_INVOICEDECLARATIONID_IS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ISMODIFIED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MATCHINGAGREEMENT",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SYSTEMENTRYSOURCE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SYSTEMENTRYCHANGEPOLICY",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "MANUALENTRYCHANGEPOLICY",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "VENDINVOICEDECLARATION_IS",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "WORKERPURCHPLACER",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DELIVERYPOSTALADDRESS",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "BANKDOCUMENTTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "LISTCODE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ISENCUMBRANCEREQUIRED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SOURCEDOCUMENTLINE",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SOURCEDOCUMENTHEADER",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "REQUESTER",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ACCOUNTINGDISTRIBUTIONTEMPLATE",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "ACCOUNTINGDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FINALIZECLOSINGDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_VENDFINALUSER",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_TAXDIRECTIMPORT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_VENDCFOPID_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_VENDINVOICETYPE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVCARRIERACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVNOOFCARRIER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVTRANSPORTBRAND",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVFREIGHTCOUNT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_PURCHOPERATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_TAXREMITTANCE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_DLVTRANSITDEPOSIT_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_VENDTRANSCONTROL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_LEDGERPOST",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_INVENTCONTROL",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_ICMS148AVOS_BR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_INVOICECOMPLEMENTARYTYPE_BR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_VENDCOMPLEMENTEDINVOICEID_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_INVOICESERIES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DINUMBER_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_VENDRPA_BR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_SALESPURCH_BR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_CFPSID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_SERVICECODEONDLVADDRESS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_ELETRONICINVOICE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_VATOPERATIONCODE_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_VATCHARGESOURCE_RU",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_INVENTPROFILETYPE_RU",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_INVENTPROFILEID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CONSTARGET_JP",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_FININTERESTCODE_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_FINECODE_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_TAXWITHHOLDCALCULATE_BR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_DELIVERYDISTRICTNAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DELIVERYADDRESSNUMBER",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DELIVERYVENDCATEGORY",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_DELIVERYADDRESSCOMPLEMENT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DELIVERYVENDCNPJCPFNUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_CUSTOMSIMPORTORDER_IN",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_CUSTOMSINVOICEREGISTERED_IN",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_TDSGROUP_IN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_TCSGROUP_IN",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_NATUREOFASSESSEE_IN",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_DELIVERYVENDIENUM",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_PRESENCETYPE_BR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INTRASTATFULFILLMENTDATE_HU",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "UNITEDVATINVOICE_LT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_AUTHORITY_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_CONSIGNORACCOUNT_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_CONSIGNEEACCOUNT_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_RCONTRACTCODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_RCONTRACTACCOUNT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_EMPLACCOUNT_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVTOWNID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVSETTLEMENTID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVSTREETID_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVFLAT_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVBUILDING_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_DLVESTATE_RU",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_INTRASTATSPECMOVE_CZ",
+				"type": "nvarchar"
+			},
+			{
+				"name": "INTRASTATADDVALUE_LV",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_LISTCODE_EE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INVOICEREGISTER_LT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PACKINGSLIPREGISTER_LT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_REFPROCESSNO_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_INVOICEMODEL_BR",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_REFUSEDNOTE_BR",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_REFUSEDREFRECID_BR",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DEL_PSANOTES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_PSASUBCONTRACT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_PSARETAINPERCENT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_PSARETAINSCHEDULEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_PSAPWP",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SERVICENAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SERVICEADDRESS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ONETIMESUPPLIER",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "SERVICEDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CONFIRMEDDLV",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FSHAUTOCREATED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CROSSDOCKINGDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "SERVICECATEGORY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AVAILSALESDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "LOCALDELIVERYDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "REPLENISHMENTLOCATION",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_REPLENISHMENTGROUPID_DEL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RETAILRETAILSTATUSTYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_RETAILPOSTEDPRID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_RETAILPRDOCUMENT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "RETAILDRIVERDETAILS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_RETAILCASECOUNT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "RETAILCONCESSIONPURCH",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CONFIRMINGPO",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "MCRDROPSHIPMENT",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EXCHANGERATEDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "FIXEDEXCHRATE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "TAMVENDREBATEGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TAXPERIODPAYMENTCODE_PL",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TRANSPORTATIONDOCUMENT",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DEL_AGREEMENTHEADEREXT_RU",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DEL_INVOICEREFRECID_BR",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DEL_PRICEAGREEMENTDATE_RU",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_SALESPURCHOPERATIONTYPE_BR",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "DEL_TAXBRANCH",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SC_CMMSCHANGEORDERID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SC_CMMSPURCHID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SC_CMMSRELEASEID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SC_CMMSTRANSACTIONID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "CREATEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SC_REQUESTERID",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "PURCHTABLE"
+		}
+	}
+}

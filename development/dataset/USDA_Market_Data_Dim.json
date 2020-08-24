@@ -1,0 +1,58 @@
+{
+	"name": "USDA_Market_Data_Dim",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "EDW",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "Item_Name",
+				"type": "varchar"
+			},
+			{
+				"name": "Daily_Release_Version",
+				"type": "char"
+			},
+			{
+				"name": "Market_Data_Effective_Date",
+				"type": "date"
+			},
+			{
+				"name": "Pounds_Sold",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Lower_Limit_Per_100_Pounds",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 3
+			},
+			{
+				"name": "Upper_Limit_Per_100_Pounds",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 3
+			},
+			{
+				"name": "Weighted_Average_Per_100_Pounds",
+				"type": "decimal",
+				"precision": 15,
+				"scale": 3
+			},
+			{
+				"name": "Insert_Date_Time",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "USDA_Market_Data"
+		}
+	}
+}

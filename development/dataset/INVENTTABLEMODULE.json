@@ -1,0 +1,270 @@
+{
+	"name": "INVENTTABLEMODULE",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "PWDBS024",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "SqlServerTable",
+		"schema": [
+			{
+				"name": "ITEMID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MODULETYPE",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "UNITID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRICE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PRICEUNIT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MARKUP",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "LINEDISC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MULTILINEDISC",
+				"type": "nvarchar"
+			},
+			{
+				"name": "ENDDISC",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_QUANTITY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_LOWESTQTY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_HIGHESTQTY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "TAXITEMGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_BLOCKED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_DELIVERYTIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_INVENTLOCATIONID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_MANDATORYINVENTLOCATION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_STANDARDQTY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MARKUPGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "PRICEDATE",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "PRICEQTY",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "ALLOCATEMARKUP",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "OVERDELIVERYPCT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "UNDERDELIVERYPCT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "SUPPITEMGROUPID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DEL_CALENDARDAYS",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "INTERCOMPANYBLOCKED",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TAXWITHHOLDITEMGROUPHEADING_TH",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "TAXWITHHOLDCALCULATE_TH",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "DEL_TAXWITHHOLDITEMGROUP_TH",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MAXIMUMRETAILPRICE_IN",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PRICESECCUR_RU",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "MARKUPSECCUR_RU",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_PRICEINCLVAT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_MINPRICEINCLVAT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "DEL_MAXPRICEINCLVAT",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			},
+			{
+				"name": "PDSPRICINGPRECISION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "TAXGSTRELIEFCATEGORY_MY",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "MODIFIEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_MODIFIEDTIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "MODIFIEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "CREATEDDATETIME",
+				"type": "datetime",
+				"precision": 23,
+				"scale": 3
+			},
+			{
+				"name": "DEL_CREATEDTIME",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "CREATEDBY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "DATAAREAID",
+				"type": "nvarchar"
+			},
+			{
+				"name": "RECVERSION",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "PARTITION",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "RECID",
+				"type": "bigint",
+				"precision": 19
+			},
+			{
+				"name": "SC_BASEPRICE",
+				"type": "decimal",
+				"precision": 32,
+				"scale": 16
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "INVENTTABLEMODULE"
+		}
+	}
+}
